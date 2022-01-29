@@ -1,0 +1,130 @@
+@import '../../../../styles/variables.module';
+
+.productCard {
+    max-width: 300px;
+    margin-bottom: 8rem;
+    border-radius: 0;
+
+    .cardContent {
+        margin: 1rem 0 1rem 1rem;
+
+        h5 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    
+        h6 {
+            font-size: 2rem;
+            line-height: 0;
+            margin-bottom: 2rem;
+        }
+    
+        .cost {
+            color: $main-color;
+            margin-bottom: 2rem;
+        }
+    
+        .sizeList {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    
+        .sizes {
+            display: flex;
+            gap: 1rem;
+    
+            p {
+                font-size: 2rem;
+                margin: 0;
+            }
+        }
+
+        .infoButton {
+            margin: 2rem;
+        }
+    }
+
+    button {
+        width: 300px;
+        height: 72px;
+        font-size: 2.4rem;
+        font-family: 'Segoe UI';
+        background-color: $main-color;
+        border-radius: 0px;
+        text-transform: none;
+    }
+
+    button:hover {
+        background-color: $main-color-hover;
+    }
+}
+
+@media screen and (max-width: 659px) {
+    .productCard {
+        max-width: 200px;
+
+        img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .cardContent {
+            padding: .5rem;
+    
+            h5 {
+                font-size: 2rem;
+            }
+
+            h6 {
+                font-size: 1.75rem;
+            }
+        
+            .sizes {
+                p {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .productCard {
+        max-width: 47.5vw;
+
+        img {
+            height: 47.5vw;
+        }
+
+        .cardContent {
+            padding: .25rem;
+
+            h5 {
+                font-size: 4.5vw;
+            }
+
+            h6 {
+                font-size: 4vw;
+            }
+
+            .sizes {
+                p {
+                    font-size: 4vw;
+                }
+            }
+        }
+
+        button {
+            width: 47.5vw;
+            height: 12.5vw;
+            font-size: 4.5vw;
+        }
+    }
+}

@@ -1,0 +1,154 @@
+@import '../../../../styles/variables.module';
+
+.header {
+    background-color: none;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2000;
+    transition: background-color .5s ease;
+
+    .wrapper {
+        margin: 0 auto;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            color: $main-color;
+
+            li {
+
+                h1 {
+                    font-size: 3.5rem;
+                    padding: 2.65rem 2rem;
+                    cursor: pointer;
+                    transition: padding .5s ease;
+                }
+
+                .midButtons {
+                    display: flex;
+                    color: white;
+                    font-weight: 600;
+                    transition: color .3s ease;
+
+                    a {
+                        font-size: 2rem;
+                        padding: 3.65rem 2rem;
+                        transition: transform .3s ease;
+                        transition: padding .5s ease;
+                    }
+
+                    a:hover {
+                        transform: scale(1.05);
+                    }
+                }
+
+                .iconList {
+                    
+                    .icon {
+                        margin: 3.65rem 1.5rem;
+                        height: 100%;
+                        width: 2.5rem;
+                        cursor: pointer;
+                        transition: margin .5s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header2 {
+    position: fixed;
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2000;
+    transition: background-color .5s ease;
+
+    .wrapper {
+        margin: 0 auto;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            color: $main-color;
+
+            li {
+
+                h1 {
+                    font-size: 3.5rem;
+                    padding: calc((2.65rem / 4) * 3) 2rem;
+                    cursor: pointer;
+                    transition: padding .5s ease;
+                }
+
+                .midButtons {
+                    display: flex;
+                    color: black;
+                    font-weight: 600;
+                    transition: color .3s ease;
+
+                    a {
+                        font-size: 2rem;
+                        padding: calc((3.65rem / 4) * 3) 2rem;
+                        transition: transform .3s ease;
+                        transition: all .5s ease;
+                    }
+
+                    a:hover {
+                        transform: scale(1.05);
+                    }
+                }
+
+                .iconList {
+                    
+                    .icon {
+                        margin: calc((3.65rem / 4) * 3) 1.5rem;
+                        height: 100%;
+                        width: 2.5rem;
+                        cursor: pointer;
+                        transition: margin .5s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        .wrapper {
+            ul {
+                li {
+                    .midButtons {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .header2 {
+        .wrapper {
+            ul {
+                li {
+                    .midButtons {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

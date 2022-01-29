@@ -1,0 +1,50 @@
+@import '../../../../styles/variables.module';
+
+.products {
+    padding-top: 10rem;
+    background-color: $bg-color;
+
+    .wrapper {
+        max-width: $max-width;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 1319px) {
+    .products {
+      .wrapper {
+        max-width: $max-width-three-rows;
+        margin: 0 auto;
+      }
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .products {
+      .wrapper {
+        max-width: $max-width-two-rows;
+        margin: 0 auto;
+      }
+    }
+}
+
+@media screen and (max-width: 659px) {
+    .products {
+        .wrapper {
+            max-width: 450px;
+            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+  .products {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+}

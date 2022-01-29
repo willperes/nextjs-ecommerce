@@ -1,0 +1,71 @@
+@import '../../styles/variables.module.scss';
+
+.product {
+    height: 100vh;
+    background-color: $bg-color;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        gap: 5rem;
+        margin: 12.5rem 5rem 0 5rem;
+
+        .imgWrapper {
+            height: auto;
+            width: 60rem;
+            img {
+                height: auto;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .productInfo {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+
+            .rating {
+                margin-top: 1rem;
+                font-size: 2.5rem;
+            }
+
+            .button {
+                background-color: $main-color;
+                margin-top: 2rem;
+                transition: background-color .5s ease;
+            }
+    
+            .button:hover {
+                background-color: $main-color-hover;
+            }
+        }
+
+
+        h1 {
+            font-size: 6rem;
+            margin: 0;
+            line-height: 6rem;
+        }
+        
+        h2 {
+            font-size: 4rem;
+            font-weight: 500;
+            margin: 0;
+            margin-top: 2rem;
+            color: $main-color;
+        }
+    
+        h3 {
+            font-size: 6rem;
+            margin: 0;
+        }
+    
+        p {
+            font-size: 2rem;
+            max-width: 55rem;
+            margin: 0;
+        }
+    }
+}
