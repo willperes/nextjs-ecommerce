@@ -35,11 +35,51 @@
           height: auto;
           width: 3rem;
           margin-right: 1rem;
+          margin-bottom: .5rem;
           transition: transform 0.3s ease;
         }
 
         .footerIcon:hover {
           transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .footer {
+    .footerWrapper {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    .footerWrapper {
+      display: flex;
+      flex-direction: column;
+
+      ul {
+        padding: 0;
+        margin: 0;
+        li{
+          text-align: center;
+
+          h5 {
+            font-size: 2rem;
+          }
+  
+          h6 {
+            font-size: 1.75rem;
+          }
+  
+          a {
+            font-size: 1.25rem;
+          }
         }
       }
     }
