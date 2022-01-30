@@ -21,7 +21,7 @@ function ProductCard(props) {
             {products && (
                 products.map(product => (
                     <div key={product.id} className={styles.productCard}>
-                        <Card sx={{ maxWidth: 300 }}>
+                        <Card sx={{ maxWidth: 300, borderRadius: 0 }}>
                             <CardMedia
                                 component="img"
                                 alt="green iguana"

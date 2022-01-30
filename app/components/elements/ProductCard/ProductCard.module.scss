@@ -3,10 +3,10 @@
 .productCard {
     max-width: 300px;
     margin-bottom: 8rem;
-    border-radius: 0;
 
     .cardContent {
         margin: 1rem 0 1rem 1rem;
+        color: $text-color-grey;
 
         h5 {
             font-size: 2.4rem;
@@ -15,7 +15,7 @@
         }
     
         h6 {
-            font-size: 2rem;
+            font-size: 1.75rem;
             line-height: 0;
             margin-bottom: 2rem;
         }
@@ -35,7 +35,7 @@
             gap: 1rem;
     
             p {
-                font-size: 2rem;
+                font-size: 1.75rem;
                 margin: 0;
             }
         }
@@ -47,8 +47,8 @@
 
     button {
         width: 300px;
-        height: 72px;
-        font-size: 2.4rem;
+        height: 65px;
+        font-size: 2.25rem;
         font-family: 'Segoe UI';
         background-color: $main-color;
         border-radius: 0px;

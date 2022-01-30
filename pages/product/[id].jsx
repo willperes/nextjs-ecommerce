@@ -8,6 +8,7 @@ import { styled } from '@mui/material/styles';
 import { purple } from '@mui/material/colors';
 import Image from 'next/image';
 import Footer from '../../app/components/modules/Footer/Footer';
+import Sizes from '../../app/components/elements/Sizes/Sizes';
 
 export const getStaticPaths = async () => {
     const res = await fetch('https://still-temple-20368.herokuapp.com/products');
@@ -53,24 +54,32 @@ const Product = ({ product }) => {
             <div className={styles.product}>
                 <div className={styles.container}>
                     <div className={styles.imgWrapper}>
-                        <Image src={product.image} alt={product.name} height='1000%' width='1000%' layout='responsive' className={styles.image} />
+                        <Image
+                            className={styles.image}
+                            src={product.image}
+                            alt={product.name}
+                            height='1000%'
+                            width='1000%'
+                            layout='responsive'
+                            priority='true'
+                        />
                     </div>
                     <main className={styles.productInfo}>
                         <h1>{product.name}</h1>
                         <Rating className={styles.rating} name="read-only" value={4} readOnly />
+                        <h2>${product.cost}</h2>
+                        <div className={styles.buttonWrapper}>
+                            <Sizes sizes={product.sizes}/>
+                            <ColorButton
+                                className={styles.button}
+                                variant="contained"
+                                sx={{
+                                    fontFamily: '"Segoe UI"'
+                                }}
+                            >Add to cart</ColorButton>
+                        </div>
+                        <h3>Product description</h3>
                         <p>{product.description}</p>
-                        <h2>${product.cost} USD</h2>
-                        <ColorButton
-                            className={styles.button}
-                            variant="contained"
-                            sx={{
-                                height: 50,
-                                width: 200,
-                                fontSize: 20,
-                                textTransform: 'none',
-                                fontFamily: '"Segoe UI"'
-                            }}
-                        >Add to cart</ColorButton>
                     </main>
                 </div>
             </div>

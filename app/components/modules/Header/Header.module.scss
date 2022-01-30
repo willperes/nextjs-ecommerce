@@ -19,12 +19,12 @@
             margin: 0;
             padding: 0;
             list-style: none;
-            color: $main-color;
+            color: white;
 
             li {
 
                 h1 {
-                    font-size: 3.5rem;
+                    font-size: 3rem;
                     padding: 2.65rem 2rem;
                     cursor: pointer;
                     transition: padding .5s ease;
@@ -37,14 +37,9 @@
                     transition: color .3s ease;
 
                     a {
-                        font-size: 2rem;
+                        font-size: 1.75rem;
                         padding: 3.65rem 2rem;
-                        transition: transform .3s ease;
                         transition: padding .5s ease;
-                    }
-
-                    a:hover {
-                        transform: scale(1.05);
                     }
                 }
 
@@ -66,7 +61,6 @@
 .header2 {
     position: fixed;
     background-color: white;
-    border-bottom: 1px solid #dbdbdb;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -88,27 +82,30 @@
             li {
 
                 h1 {
-                    font-size: 3.5rem;
+                    font-size: 3rem;
                     padding: calc((2.65rem / 4) * 3) 2rem;
                     cursor: pointer;
-                    transition: padding .5s ease;
+                    transition: all .5s ease;
+                }
+
+                h1:hover {
+                    color: $main-color-hover;
                 }
 
                 .midButtons {
                     display: flex;
-                    color: black;
+                    color: $main-color;
                     font-weight: 600;
                     transition: color .3s ease;
 
                     a {
-                        font-size: 2rem;
+                        font-size: 1.75rem;
                         padding: calc((3.65rem / 4) * 3) 2rem;
-                        transition: transform .3s ease;
-                        transition: all .5s ease;
+                        transition: all .3s ease;
                     }
 
                     a:hover {
-                        transform: scale(1.05);
+                        color: $main-color-hover;
                     }
                 }
 
@@ -119,7 +116,11 @@
                         height: 100%;
                         width: 2.5rem;
                         cursor: pointer;
-                        transition: margin .5s ease;
+                        transition: all .5s ease;
+                    }
+
+                    .icon:hover {
+                        color: $main-color-hover;
                     }
                 }
             }

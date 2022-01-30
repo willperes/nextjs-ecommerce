@@ -27,6 +27,14 @@ function Footer() {
           <li><a href="#"></a></li>
         </ul>
         <ul>
+          <li><h5>Atendimento</h5></li>
+          <li><p>Das 08 às 18h, de segunda a sexta</p></li>
+          <li><p>Telefone: (00) 3333-3333</p></li>
+          <li><p>WhatsApp: (00) 99999-9999</p></li>
+          <li><p>E-mail: yourstore@loremipsum.com</p></li>
+          <li></li>
+        </ul>
+        {/* <ul>
           <li><h5>Formas de pagamento</h5></li>
           <li><h6>Cartão de Crédito</h6></li>
           <li><div className={styles.footerCardPayment}>
@@ -41,7 +49,7 @@ function Footer() {
           <li><a href="#">Confira as condições</a></li>
           <li><h6>Boleto Antecipado</h6></li>
           <li><a href="#">À vista com 3% de desconto em produtos</a></li>
-        </ul>
+        </ul> */}
         <ul>
           <li><h5>Baixe nosso aplicativo</h5></li>
           <li><div className={styles.footerIconWrapper}>

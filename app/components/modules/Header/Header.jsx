@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-import { FaSearch, FaUserAlt, FaShoppingCart } from 'react-icons/fa';
+import { AiOutlineSearch, AiOutlineUser, AiOutlineShopping } from 'react-icons/ai';
 import styles from './Header.module.scss';
 
 function Header() {
@@ -37,9 +37,9 @@ function Header() {
           </li>
           <li>
             <div className={styles.iconList}>
-              <FaSearch className={styles.icon} />
-              <FaUserAlt className={styles.icon} />
-              <FaShoppingCart className={styles.icon} />
+              <AiOutlineSearch className={styles.icon} />
+              <AiOutlineUser className={styles.icon} />
+              <AiOutlineShopping className={styles.icon} />
             </div>
           </li>
         </ul>
