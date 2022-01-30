@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Footer from '../app/components/modules/Footer/Footer';
 import Header from '../app/components/modules/Header/Header'
 import Hero from '../app/components/modules/Hero/Hero'
 import Products from '../app/components/modules/Products/Products';
@@ -15,6 +16,7 @@ export default function Home({ products }) {
       <Header />
       <Hero />
       <Products products={products}/>
+      <Footer />
     </div>
   )
 }
