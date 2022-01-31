@@ -1,6 +1,7 @@
 @import '../../styles/variables.module.scss';
 
-.alert {
+.alertError {
+    background-color: rgb(255, 180, 180);
     font-family: 'Segoe UI' !important;
     position: fixed;
     z-index: 3000;
@@ -8,7 +9,19 @@
     right: 5rem;
     font-size: 1.25rem !important;
     font-weight: 500;
-    background-color: rgb(255, 180, 180);
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.alertSuccess {
+    background-color: rgb(170, 255, 170);
+    font-family: 'Segoe UI' !important;
+    position: fixed;
+    z-index: 3000;
+    bottom: 5rem;
+    right: 5rem;
+    font-size: 1.25rem !important;
+    font-weight: 500;
     max-width: 100%;
     cursor: pointer;
 }
@@ -144,7 +157,7 @@
 }
 
 @media screen and (max-width: 650px) {
-    .alert {
+    .alertError, .alertSuccess {
         width: 75vw;
         left: 50%;
         transform: translate(-50%, -50%);

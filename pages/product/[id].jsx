@@ -68,7 +68,8 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 
 const Product = ({ product }) => {
     const [size, setSize] = useState('');
-    const [isVisible, setVisibility] = useState(null);
+    const [errorAlertVisibility, setErrorAlertVisibility] = useState(null);
+    const [successAlertVisibility, setSuccessAlertVisibility] = useState(null);
 
     const handleChange = (event) => {
         setSize(event.target.value);
@@ -82,10 +83,14 @@ const Product = ({ product }) => {
     */
     const handleClick = (product) => {
         if (size === '') {
-            setVisibility(true);
-            // setTimeout(() => { setVisibility(false) }, 5000);
+            setSuccessAlertVisibility(false);
+            setErrorAlertVisibility(true);
+            setTimeout(() => { setErrorAlertVisibility(false) }, 5000);
             return;
         }
+        setErrorAlertVisibility(false);
+        setSuccessAlertVisibility(true);
+        setTimeout(() => { setSuccessAlertVisibility(false) }, 5000);
         addToCart(product, size)
     }
 
@@ -94,7 +99,8 @@ const Product = ({ product }) => {
             <Head>
                 <title>{product.name}</title>
             </Head>
-            {isVisible && <Alert onClick={() => {setVisibility(false)}} severity="error" className={styles.alert}>Você precisa selecionar um tamanho antes de adicionar ao carrinho</Alert>}
+            {errorAlertVisibility && <Alert onClick={() => {setErrorAlertVisibility(false)}} severity="error" className={styles.alertError}>Você precisa selecionar um tamanho antes de adicionar ao carrinho</Alert>}
+            {successAlertVisibility && <Alert onClick={() => {setSuccessAlertVisibility(false)}} severity="success" className={styles.alertSuccess}>Produto adicionado ao carrinho com sucesso</Alert>}
             <Header2 />
             <div className={styles.product}>
                 <div className={styles.container}>

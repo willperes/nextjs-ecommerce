@@ -36,10 +36,12 @@
                     font-weight: 600;
                     transition: color .3s ease;
 
-                    a {
+                    p {
+                        margin: 0;
                         font-size: 1.75rem;
                         padding: 3.65rem 2rem;
                         transition: padding .5s ease;
+                        cursor: pointer;
                     }
                 }
 
@@ -107,15 +109,19 @@
                     font-weight: 600;
                     transition: color .3s ease;
 
-                    a {
+                    p {
+                        margin: 0;
                         font-size: 1.75rem;
                         padding: calc((3.65rem / 4) * 3) 2rem;
                         transition: all .3s ease;
+                        cursor: pointer;
                     }
 
-                    a:hover {
+                    p:hover {
                         color: $main-color-hover;
                     }
+
+                    
                 }
 
                 .iconList {

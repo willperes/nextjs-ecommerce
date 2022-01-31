@@ -29,10 +29,10 @@ function Header() {
           <li><Link href={'/'}><h1 className={styles.logo}>YourStore</h1></Link></li>
           <li>
             <div className={styles.midButtons}>
-              <Link href={'/'}><a href='#'>Home</a></Link>
-              <a href='#'>Shop</a>
-              <a href='#'>About</a>
-              <a href='#'>Blog</a>
+              <Link href={'/'}><p>Home</p></Link>
+              <Link href={'/'}><p>Shop</p></Link>
+              <p>About</p>
+              <p>Blog</p>
             </div>
           </li>
           <li>

@@ -16,76 +16,189 @@
             flex-direction: column;
             justify-content: center;
     
+            .wrapper {
+                margin: 0 5rem;
+
+                h1 {
+                    color: $text-color-grey;
+                    font-size: 3.5rem;
+                    margin-bottom: 2rem;
+                }
+        
+                .product {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+        
+                    .productWrapper {
+                        display: flex;
+                        margin-bottom: 2.5rem;
+        
+                        .imgWrapper {
+                            height: auto;
+                            width: 15rem;
+                            cursor: pointer;
+                            
+                            .image {
+                                border-radius: 5px;
+                            }
+                        }
+                
+                        .productInfo {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 2.5rem;
+                            margin-top: .5rem;
+                            color: $text-color-grey;
+                            
+                            h1 {
+                                font-size: 2.5rem;
+                                font-weight: 500;
+                                margin: 0;
+                                margin-bottom: .5rem;
+                                cursor: pointer;
+                            }
+    
+                            h1:hover {
+                                text-decoration: underline;
+                            }
+            
+                            h2 {
+                                font-size: 2rem;
+                                font-weight: 400;
+                                margin: 0;
+                            }
+            
+                            span {
+                                font-weight: 500;
+                            }
+                        }
+                    }
+        
+                    .deleteIcon {
+                        height: 4rem;
+                        margin-bottom: 2.5rem;
+        
+                        .icon {
+                            height: auto;
+                            width: 2.5rem;
+                            color: rgb(255, 125, 125);
+                            transition: all .3s ease;
+                        }
+        
+                        .icon:hover {
+                            color: rgb(255, 75, 75);
+                        }
+                    }
+                }
+        
+                .divider {
+                    margin-bottom: 4rem;
+                    list-style: none;
+                }
+            }
+        }
+
+        .cost {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 7.5rem;
+
             h1 {
                 color: $text-color-grey;
-                font-size: 3.5rem;
-                margin-bottom: 2rem;
+                font-size: 3.5rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            button {
+                background-color: $main-color;
+                border-radius: 0;
+                box-shadow: none;
+                height: 5rem;
+                width: 30rem;
+                font-size: 1.5rem;
+                transition: background-color .5s ease;
             }
     
-            .product {
+            button:hover {
+                background-color: $main-color-hover;
+            }
+
+            .paymentMethods {
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-    
-                .productWrapper {
-                    display: flex;
-                    margin-bottom: 2.5rem;
-    
-                    .imgWrapper {
-                        height: auto;
-                        width: 15rem;
-                        
-                        .image {
-                            border-radius: 5px;
-                        }
-                    }
-            
-                    .productInfo {
-                        display: flex;
-                        flex-direction: column;
-                        margin-left: 2.5rem;
-                        margin-top: .5rem;
-                        color: $text-color-grey;
-                        
-                        h1 {
-                            font-size: 2.5rem;
-                            font-weight: 500;
-                            margin: 0;
-                            margin-bottom: .5rem;
-                        }
-        
-                        h2 {
-                            font-size: 2rem;
-                            font-weight: 400;
-                            margin: 0;
-                        }
-        
-                        span {
-                            font-weight: 500;
-                        }
-                    }
+                gap: 1rem;
+                margin-top: 1rem;
+
+                .icon {
+                    color: $text-color-grey;
+                    height: auto;
+                    width: 4rem;
                 }
-    
-                .deleteIcon {
-                    height: 4rem;
-                    margin-bottom: 2.5rem;
-    
-                    .icon {
-                        height: auto;
-                        width: 2.5rem;
-                        color: rgb(255, 125, 125);
-                        transition: all .3s ease;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .cart {
+        .container {
+            .products {
+                .wrapper {
+                    margin: 0 5vw;
+                    h1 {
+                        text-align: center;
+                        font-size: 3rem;
                     }
-    
-                    .icon:hover {
-                        color: rgb(255, 75, 75);
+                    .product {
+                        .productWrapper {
+                            .imgWrapper {
+                                width: 12.5rem;
+                            }
+
+                            .productInfo {
+                                h1 {
+                                    font-size: 2rem;
+                                }
+
+                                h2 {
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }
                     }
                 }
             }
-    
-            .divider {
-                margin-bottom: 4rem;
-                list-style: none;
+
+            .cost {
+                h1 {
+                    font-size: 3rem !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cart {
+        .container {
+            .products {
+                .wrapper {
+                    .product {
+                        .productWrapper {
+                            .imgWrapper {
+                                width: 10rem;
+                            }
+                        }
+                    }
+
+                    .cost {
+                        button {
+                            width: 90vw;
+                        }
+                    }
+                }
             }
         }
     }

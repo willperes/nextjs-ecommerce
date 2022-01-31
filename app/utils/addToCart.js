@@ -7,7 +7,7 @@ export default function addToCart(product, size) {
 
     for (let i = 0; i < cartProducts.length; i++) {
         let id = product.id;
-        if (cartProducts[i].id === id) {
+        if ((cartProducts[i].id === id) && (cartProducts[i].size === size)) {
           cartProducts[i].qty = cartProducts[i].qty + 1;
           localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
           return;
