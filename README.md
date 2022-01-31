@@ -38,10 +38,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 ## Rodando a plataforma
 ```bash
 # Clone este repositório
-$ git clone https://github.com/willperes/fruit-ecommerce
+$ git clone https://github.com/willperes/nextjs-ecommerce
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd fruit-ecommerce
+$ cd nextjs-ecommerce
 
 # Instale as dependências
 $ npm install
