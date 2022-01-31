@@ -20,7 +20,7 @@ function Header() {
             <div className={styles.iconList}>
               <AiOutlineSearch className={styles.icon} />
               <AiOutlineUser className={styles.icon} />
-              <AiOutlineShopping className={styles.icon} />
+              <Link href={'/cart'}><div><AiOutlineShopping className={styles.iconLink} /></div></Link>
             </div>
           </li>
         </ul>

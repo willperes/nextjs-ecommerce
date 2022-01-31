@@ -44,9 +44,18 @@
                 }
 
                 .iconList {
+                    display: flex;
                     
                     .icon {
                         margin: 3.65rem 1.5rem;
+                        height: 100%;
+                        width: 2.5rem;
+                        cursor: pointer;
+                        transition: margin .5s ease;
+                    }
+
+                    .iconLink {
+                        margin: 0 1.5rem;
                         height: 100%;
                         width: 2.5rem;
                         cursor: pointer;
@@ -110,6 +119,7 @@
                 }
 
                 .iconList {
+                    display: flex;
                     
                     .icon {
                         margin: calc((3.65rem / 4) * 3) 1.5rem;
@@ -119,7 +129,15 @@
                         transition: all .5s ease;
                     }
 
-                    .icon:hover {
+                    .iconLink {
+                        margin: 0 1.5rem;
+                        height: 100%;
+                        width: 2.5rem;
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+
+                    .icon:hover, .iconLink:hover {
                         color: $main-color-hover;
                     }
                 }

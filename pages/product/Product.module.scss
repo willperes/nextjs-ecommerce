@@ -1,9 +1,22 @@
 @import '../../styles/variables.module.scss';
 
+.alert {
+    font-family: 'Segoe UI' !important;
+    position: fixed;
+    z-index: 3000;
+    bottom: 5rem;
+    right: 5rem;
+    font-size: 1.25rem !important;
+    font-weight: 500;
+    background-color: rgb(255, 180, 180);
+    max-width: 100%;
+    cursor: pointer;
+}
+
 .product {
-    height: 100vh;
+    height: 100%;
     background-color: $bg-color;
-    padding: 1rem 0;
+    padding: 1rem 0 15rem 0;
 
     .container {
         display: flex;
@@ -15,12 +28,6 @@
         .imgWrapper {
             height: auto;
             width: 60rem;
-
-            .imageLarge {
-                height: auto;
-                max-width: 100%;
-                object-fit: contain;
-            }
         }
 
         .productInfo {
@@ -33,7 +40,7 @@
                 font-size: 2rem;
             }
 
-            .button {
+            button {
                 background-color: $main-color;
                 border-radius: 0;
                 box-shadow: none;
@@ -44,7 +51,7 @@
                 transition: background-color .5s ease;
             }
     
-            .button:hover {
+            button:hover {
                 background-color: $main-color-hover;
             }
         }
@@ -82,7 +89,7 @@
     .product {
         .container {
             .productInfo {
-                .button {
+                button {
                     margin: 0;
                 }
             }
@@ -94,7 +101,7 @@
     .product {
         .container {
             .productInfo {
-                .button {
+                button {
                     width: 30rem;
                 }
             }
@@ -127,7 +134,7 @@
                 text-align: center;
                 align-items: center;
 
-                .button {
+                button {
                     height: 5.5rem;
                     width: 90vw;
                 }
@@ -137,6 +144,13 @@
 }
 
 @media screen and (max-width: 650px) {
+    .alert {
+        width: 75vw;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: 2.5rem;
+    }
+
     .product {
         .container {
             .productInfo {
@@ -148,7 +162,7 @@
                     font-size: 2.5rem;
                 }
 
-                .button {
+                button {
                     width: 90vw;
                 }
 
