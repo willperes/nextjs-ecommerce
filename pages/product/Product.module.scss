@@ -138,6 +138,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-top: 9rem;
 
             .imgWrapper {
                 width: 90vw;
@@ -147,9 +148,15 @@
                 text-align: center;
                 align-items: center;
 
-                button {
-                    height: 5.5rem;
-                    width: 90vw;
+                .buttonWrapper {
+                    button {
+                        height: 5.5rem;
+                        width: 90vw;
+                    }
+
+                    .select {
+                        margin: 0 0 1rem 0;
+                    }
                 }
             }
         }
@@ -166,6 +173,8 @@
 
     .product {
         .container {
+            gap: 1.5rem;
+
             .productInfo {
                 h1 {
                     font-size: 3rem;
@@ -175,14 +184,20 @@
                     font-size: 2.5rem;
                 }
 
-                button {
-                    width: 90vw;
-                }
-
                 .rating {
                     margin: 0;
                     margin-top: .5rem;
                     font-size: 2rem;
+                }
+
+                .buttonWrapper {
+                    button {
+                        width: 90vw;
+                    }
+
+                    .select {
+                        margin: -.5rem 0 1rem 0;
+                    }
                 }
             }
         }

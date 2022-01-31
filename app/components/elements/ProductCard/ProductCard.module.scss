@@ -63,6 +63,7 @@
 @media screen and (max-width: 659px) {
     .productCard {
         max-width: 200px;
+        margin-bottom: 4rem;
 
         img {
             height: 200px;
@@ -78,6 +79,11 @@
 
             h6 {
                 font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .cost {
+                margin-bottom: 1.5rem;
             }
         
             .sizes {
@@ -98,6 +104,7 @@
 @media screen and (max-width: 420px) {
     .productCard {
         max-width: 47.5vw;
+        margin-bottom: 2rem;
 
         img {
             height: 47.5vw;

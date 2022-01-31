@@ -112,7 +112,7 @@ const Product = ({ product }) => {
                         <Rating className={styles.rating} name="read-only" value={4} readOnly />
                         <h2>${product.cost}</h2>
                         <div className={styles.buttonWrapper}>
-                            <FormControl sx={{ m: 1 }} variant="standard">
+                            <FormControl className={styles.select} sx={{ m: 1 }} variant="standard">
                                 <Select
                                     labelId="demo-customized-select-label"
                                     id="demo-customized-select"
