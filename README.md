@@ -14,8 +14,8 @@
 - [x] Adicionar produtos ao carrinho
 - [x] Remover produtos do carrinho
 - [x] Atualizar o preço do carrinho de acordo com os produtos e suas quantidades
+- [x] Hamburguer menu
 - [ ] Atualizar quantidade do produto no carrinho
-- [ ] Hamburguer menu
 - [ ] Sistema de login de clientes
 - [ ] Checkout do pedido
 - [ ] Pequeno blog com postagens da loja
