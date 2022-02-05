@@ -14,7 +14,6 @@
     gap: 7.5rem;
     padding-bottom: 10rem;
     margin: 0 2.5rem;
-    border-bottom: 1px solid $light-grey;
 
     ul {
       list-style: none;
@@ -43,9 +42,11 @@
   }
 
   .paymentMethods {
+    border-top: 1px solid $light-grey;
     display: flex;
     gap: 1rem;
     margin: 0 2.5rem;
+    padding-top: 1.5rem;
   }
 }
 
@@ -62,6 +63,7 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      padding-bottom: 5rem;
 
       ul {
         padding: 0;

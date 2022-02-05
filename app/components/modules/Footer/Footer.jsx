@@ -41,13 +41,13 @@ function Footer() {
         </ul>
       </div>
       <section className={styles.paymentMethods}>
-        <Image src={MasterCard} height="100%" width="50rem"></Image>
-        <Image src={Visa} height="100%" width="50rem"></Image>
-        <Image src={GooglePay} height="100%" width="50rem"></Image>
-        <Image src={ApplePay} height="100%" width="50rem"></Image>
-        <Image src={PayPal} height="100%" width="50rem"></Image>
-        <Image src={Amazon} height="100%" width="50rem"></Image>
-        <Image src={AliPay} height="100%" width="50rem"></Image>
+        <Image src={MasterCard} height="50%" width="50rem"></Image>
+        <Image src={Visa} height="50%" width="50rem"></Image>
+        <Image src={GooglePay} height="50%" width="50rem"></Image>
+        <Image src={ApplePay} height="50%" width="50rem"></Image>
+        <Image src={PayPal} height="50%" width="50rem"></Image>
+        <Image src={Amazon} height="50%" width="50rem"></Image>
+        <Image src={AliPay} height="50%" width="50rem"></Image>
       </section>
     </footer>
   )
