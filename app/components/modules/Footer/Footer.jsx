@@ -1,5 +1,10 @@
-import { FaCcVisa, FaCcMastercard, FaCcStripe, FaCcPaypal, FaGooglePlay } from 'react-icons/fa';
-import { RiBillFill, RiAppleFill } from 'react-icons/ri';
+import MasterCard from '../../../../public/images/mastercard-icon.svg';
+import Visa from '../../../../public/images/visa-icon.svg';
+import GooglePay from '../../../../public/images/googlepay-icon.svg';
+import ApplePay from '../../../../public/images/applepay-icon.svg';
+import PayPal from '../../../../public/images/paypal-icon.svg';
+import Amazon from '../../../../public/images/amazon-icon.svg';
+import AliPay from '../../../../public/images/alipay-icon.svg';
 
 import styles from './Footer.module.scss';
 import Image from 'next/image';
@@ -34,30 +39,16 @@ function Footer() {
           <li><p>E-mail: yourstore@loremipsum.com</p></li>
           <li></li>
         </ul>
-        {/* <ul>
-          <li><h5>Formas de pagamento</h5></li>
-          <li><h6>Cartão de Crédito</h6></li>
-          <li><div className={styles.footerCardPayment}>
-            <FaCcVisa className={styles.footerIcon} />
-            <FaCcMastercard className={styles.footerIcon} />
-            <FaCcStripe className={styles.footerIcon} />
-            <FaCcPaypal className={styles.footerIcon} />
-          </div></li>
-          <li><h6>Boleto Bancário</h6></li>
-          <li><RiBillFill className={styles.footerIcon} /></li>
-          <li><a href="#">Pague em até 6x</a></li>
-          <li><a href="#">Confira as condições</a></li>
-          <li><h6>Boleto Antecipado</h6></li>
-          <li><a href="#">À vista com 3% de desconto em produtos</a></li>
-        </ul> */}
-        <ul>
-          <li><h5>Baixe nosso aplicativo</h5></li>
-          <li><div className={styles.footerIconWrapper}>
-            <FaGooglePlay className={styles.footerIcon} />
-            <RiAppleFill className={styles.footerIcon} />
-          </div></li>
-        </ul>
       </div>
+      <section className={styles.paymentMethods}>
+        <Image src={MasterCard} height="100%" width="50rem"></Image>
+        <Image src={Visa} height="100%" width="50rem"></Image>
+        <Image src={GooglePay} height="100%" width="50rem"></Image>
+        <Image src={ApplePay} height="100%" width="50rem"></Image>
+        <Image src={PayPal} height="100%" width="50rem"></Image>
+        <Image src={Amazon} height="100%" width="50rem"></Image>
+        <Image src={AliPay} height="100%" width="50rem"></Image>
+      </section>
     </footer>
   )
 }

@@ -4,127 +4,158 @@
     max-width: 300px;
     margin-bottom: 8rem;
 
-    .cardContent {
-        margin: 1rem 0 1rem 1rem;
-        color: $text-color-grey;
+    .card {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.075);
+        transition: all .5s ease;
 
-        h5 {
-            font-size: 2.4rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+        img {
+            cursor: pointer;
         }
     
-        h6 {
-            font-size: 1.75rem;
-            line-height: 0;
-            margin-bottom: 2rem;
-        }
-    
-        .cost {
+        .cardContent {
+            margin: 1rem 0 1rem 1rem;
             color: $main-color;
-            margin-bottom: 2rem;
-        }
     
-        .sizeList {
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-    
-        .sizes {
-            display: flex;
-            gap: 1rem;
-    
-            p {
+            h5 {
+                font-size: 2.4rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+        
+            h6 {
                 font-size: 1.75rem;
-                margin: 0;
+                line-height: 0;
+                margin-bottom: 2rem;
+            }
+        
+            .cost {
+                color: $main-color;
+                margin-bottom: 2rem;
+            }
+        
+            .sizeList {
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+        
+            .sizes {
+                display: flex;
+                gap: 1rem;
+        
+                p {
+                    font-size: 1.75rem;
+                }
+            }
+    
+            .infoButton {
+                margin: 2rem;
             }
         }
-
-        .infoButton {
-            margin: 2rem;
+    
+        button {
+            width: 300px;
+            height: 65px;
+            font-size: 2.25rem;
+            font-family: 'Segoe UI';
+            background-color: $main-color;
+            border-radius: 0px;
+            text-transform: none;
+        }
+    
+        button:hover {
+            background-color: $main-color-hover;
         }
     }
 
-    button {
-        width: 300px;
-        height: 65px;
-        font-size: 2.25rem;
-        font-family: 'Segoe UI';
-        background-color: $main-color;
-        border-radius: 0px;
-        text-transform: none;
-    }
-
-    button:hover {
-        background-color: $main-color-hover;
+    .card:hover {
+        transform: translateY(-7.5px);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
     }
 }
 
 @media screen and (max-width: 659px) {
     .productCard {
         max-width: 200px;
+        margin-bottom: 4rem;
 
-        img {
-            height: 200px;
-            width: 200px;
-        }
-
-        .cardContent {
-            padding: .5rem;
+        .card {
+            img {
+                height: 200px;
+                width: 200px;
+            }
     
-            h5 {
-                font-size: 2rem;
-            }
-
-            h6 {
-                font-size: 1.75rem;
-            }
+            .cardContent {
+                padding: .5rem;
         
-            .sizes {
-                p {
-                    font-size: 1.75rem;
+                h5 {
+                    font-size: 1.8rem;
+                    margin-bottom: .25rem;
+                }
+    
+                h6 {
+                    font-size: 1.6rem;
+                    margin-bottom: 1.5rem;
+                }
+    
+                .excerpt {
+                    display: none;
+                }
+    
+                .cost {
+                    margin-bottom: 1.5rem;
+                }
+            
+                .sizes {
+                    p {
+                        font-size: 1.6rem;
+                    }
                 }
             }
-        }
-
-        button {
-            width: 200px;
-            height: 50px;
-            font-size: 2rem;
+    
+            button {
+                width: 200px;
+                height: 50px;
+                font-size: 2rem;
+            }
         }
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
     .productCard {
-        max-width: 47.5vw;
+        max-width: 47vw;
+        margin-bottom: 2rem;
 
-        img {
-            height: 47.5vw;
-        }
-
-        .cardContent {
-            padding: .25rem;
-
-            h5 {
-                font-size: 4.5vw;
+        .card {
+            img {
+                height: 47vw;
             }
-
-            h6 {
-                font-size: 4vw;
-            }
-
-            .sizes {
-                p {
-                    font-size: 4vw;
+    
+            .cardContent {
+                max-width: 47vw;
+                padding: .1rem;
+    
+                h5 {
+                    font-size: 1.65rem;
+                }
+    
+                h6 {
+                    font-size: 1.5rem;
+                }
+    
+                .sizes {
+                    p {
+                        font-size: 1.5rem;
+                    }
                 }
             }
-        }
-
-        button {
-            width: 47.5vw;
-            height: 12.5vw;
-            font-size: 4.5vw;
+    
+            button {
+                width: 47vw;
+                height: 12.5vw;
+                font-size: 1.65rem;
+            }
         }
     }
 }

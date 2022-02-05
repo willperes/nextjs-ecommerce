@@ -51,7 +51,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
         border: '1px solid #ced4da',
         fontSize: 16,
         fontWeight: 500,
-        color: '#958871',
+        color: '#464d55',
         padding: '10px 26px 10px 12px',
         marginTop: '1.5rem',
         transition: theme.transitions.create(['border-color', 'box-shadow']),
@@ -97,7 +97,7 @@ const Product = ({ product }) => {
     return (
         <>
             <Head>
-                <title>{product.name}</title>
+                <title>{product.name} - YourStore</title>
             </Head>
             {errorAlertVisibility && <Alert onClick={() => {setErrorAlertVisibility(false)}} severity="error" className={styles.alertError}>Você precisa selecionar um tamanho antes de adicionar ao carrinho</Alert>}
             {successAlertVisibility && <Alert onClick={() => {setSuccessAlertVisibility(false)}} severity="success" className={styles.alertSuccess}>Produto adicionado ao carrinho com sucesso</Alert>}
@@ -112,7 +112,7 @@ const Product = ({ product }) => {
                         <Rating className={styles.rating} name="read-only" value={4} readOnly />
                         <h2>${product.cost}</h2>
                         <div className={styles.buttonWrapper}>
-                            <FormControl sx={{ m: 1 }} variant="standard">
+                            <FormControl className={styles.select} sx={{ m: 1 }} variant="standard">
                                 <Select
                                     labelId="demo-customized-select-label"
                                     id="demo-customized-select"
