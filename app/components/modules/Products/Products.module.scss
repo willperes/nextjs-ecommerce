@@ -17,7 +17,6 @@
   .products {
     .wrapper {
       max-width: $max-width-three-rows;
-      margin: 0 auto;
     }
   }
 }
@@ -28,7 +27,6 @@
 
     .wrapper {
       max-width: $max-width-two-rows;
-      margin: 0 auto;
     }
   }
 }
@@ -39,13 +37,13 @@
 
     .wrapper {
       max-width: 450px;
-      margin: 0 auto;
+      padding: 0;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .products {
     .wrapper {
       grid-template-columns: 1fr 1fr;

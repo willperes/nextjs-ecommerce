@@ -16,7 +16,13 @@ a {
   box-sizing: border-box;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6, a, p {
   margin: 0;
-  font-size: 8rem;
+}
+
+img {
+  -webkit-user-drag: none; 
+  -khtml-user-drag: none; 
+  -moz-user-drag: none; 
+  -o-user-drag: none;
 }

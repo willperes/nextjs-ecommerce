@@ -21,18 +21,20 @@ function ProductCard(props) {
             {products && (
                 products.map(product => (
                     <div key={product.id} className={styles.productCard}>
-                        <Card sx={{ maxWidth: 300, borderRadius: 0 }}>
-                            <CardMedia
-                                component="img"
-                                alt="green iguana"
-                                height="300"
-                                image={product.image}
-                            />
+                        <Card className={styles.card} sx={{ maxWidth: 300, borderRadius: 0 }}>
+                            <Link href={`/product/${product.id}`}>
+                                <CardMedia
+                                    component="img"
+                                    alt="green iguana"
+                                    height="300"
+                                    image={product.image}
+                                />
+                            </Link>
                             <CardContent className={styles.cardContent}>
                                 <Typography variant="h5">
                                     {product.name}
                                 </Typography>
-                                <Typography variant="h6">
+                                <Typography className={styles.excerpt} variant="h6">
                                     {product.excerpt}
                                 </Typography>
                                 <Typography className={styles.cost} variant="h5">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 
 import Footer from "../app/components/modules/Footer/Footer";
@@ -12,7 +13,14 @@ import styles from '../styles/Cart.module.scss';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { FaAlipay, FaAmazonPay, FaApplePay, FaGooglePay, FaPaypal } from 'react-icons/fa';
+
+import MasterCard from '../public/images/mastercard-icon.svg';
+import Visa from '../public/images/visa-icon.svg';
+import GooglePay from '../public/images/googlepay-icon.svg';
+import ApplePay from '../public/images/applepay-icon.svg';
+import PayPal from '../public/images/paypal-icon.svg';
+import Amazon from '../public/images/amazon-icon.svg';
+import AliPay from '../public/images/alipay-icon.svg';
 
 export default function Cart() {
     const [cost, setCost] = useState(0);
@@ -75,6 +83,9 @@ export default function Cart() {
 
     return (
         <div className={styles.cart}>
+            <Head>
+                <title>Cart - YourStore</title>
+            </Head>
             <Header2 />
             <div className={styles.container}>
                 {isVisible && (
@@ -117,11 +128,13 @@ export default function Cart() {
                                 <h1>Cost: ${cost}</h1>
                                 <CustomButton>Check out</CustomButton>
                                 <div className={styles.paymentMethods}>
-                                    <FaPaypal className={styles.icon} />
-                                    <FaAlipay className={styles.icon} />
-                                    <FaAmazonPay className={styles.icon} />
-                                    <FaApplePay className={styles.icon} />
-                                    <FaGooglePay className={styles.icon} />
+                                    <Image src={MasterCard} height="50%" width="50rem"></Image>
+                                    <Image src={Visa} height="50%" width="50rem"></Image>
+                                    <Image src={GooglePay} height="50%" width="50rem"></Image>
+                                    <Image src={ApplePay} height="50%" width="50rem"></Image>
+                                    <Image src={PayPal} height="50%" width="50rem"></Image>
+                                    <Image src={Amazon} height="50%" width="50rem"></Image>
+                                    <Image src={AliPay} height="50%" width="50rem"></Image>
                                 </div>
                             </section>
                         </div>
